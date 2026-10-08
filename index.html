@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>מערכת השמש · מצגת לשיעור מדעים · כיתה ה׳</title>
+<meta name="description" content="מצגת אינטראקטיבית לשיעור מדעים בכיתה ה׳ על מערכת השמש: אנימציה של השמש ושמונת כוכבי הלכת, משימות בזוגות ובקבוצות, חידון בזק וכרטיס יציאה.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;600;700&family=Playpen+Sans+Hebrew:wght@500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/deck.css"></head>
+<body class="deck-page">
+<a class="skip" href="#deck">דילוג למצגת</a>
+<header class="topbar" role="banner">
+  <div class="brand"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="8" fill="#FFD86B" stroke="#2C2A4A" stroke-width="2"/><ellipse cx="20" cy="20" rx="17" ry="7" fill="none" stroke="#2C2A4A" stroke-width="2" transform="rotate(-20 20 20)"/><circle cx="35" cy="15" r="3" fill="#9FD3FF" stroke="#2C2A4A" stroke-width="1.5"/></svg><span>מערכת השמש · כיתה ה׳</span></div>
+  <span class="phase" id="phase" aria-live="off"></span>
+  <div class="tools">
+    <div class="timer" role="group" aria-label="שעון לשלב">
+      <button type="button" class="tbtn" id="timer-btn" aria-label="הפעלת שעון לשלב">⏱ <span id="timer-out">0:00</span></button>
+      <button type="button" class="tbtn sm" id="timer-reset" aria-label="איפוס השעון">↺</button>
+    </div>
+    <button type="button" class="tbtn" id="notes-btn" aria-haspopup="dialog">🔐 הערות למורה</button>
+    <button type="button" class="tbtn" id="fs-btn" aria-label="מסך מלא">⛶ <span class="hide-sm">מסך מלא</span></button>
+  </div>
+</header>
+
+<main id="deck" class="deck" tabindex="-1" aria-roledescription="מצגת" aria-label="מצגת: מערכת השמש">
+
+<!-- 1 -->
+<section class="slide s-title" id="title" data-phase="פתיחה" data-min="3" aria-label="שקופית פתיחה">
+  <div class="title-wrap">
+    <div class="title-text">
+      <p class="kicker">שיעור מדעים · כיתה ה׳ · 45 דקות</p>
+      <h1>מערכת השמש<br><span>השכונה שלנו בחלל</span></h1>
+      <p class="lead">היום תלמידים ותלמידות יחזו, יבדקו, יחשבו ויבנו מודל – והשמש תהיה במרכז.</p>
+      <ul class="agenda" aria-label="מבנה השיעור">
+        <li class="c-peach">פתיחה · 3 דק׳</li><li class="c-butter">הקנייה · 7–10 דק׳</li><li class="c-mint">משימות · כ־27 דק׳</li><li class="c-lilac">סיכום · 5 דק׳</li>
+      </ul>
+      <p class="hint">מעבר בין שקופיות: מקש → או רווח (הבאה), מקש ← (הקודמת), החלקה במסך מגע, או הכפתורים למטה.</p>
+    </div>
+    <svg class="title-art" viewBox="0 0 420 420" role="img" aria-label="איור: השמש וכוכבי לכת במסלולים">
+      <defs><radialGradient id="tg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFF1A8"/><stop offset=".6" stop-color="#FFD86B"/><stop offset="1" stop-color="#FFB86B"/></radialGradient></defs>
+      <g fill="none" stroke="#C9BEF0" stroke-width="2" stroke-dasharray="5 7"><circle cx="210" cy="210" r="90"/><circle cx="210" cy="210" r="135"/><circle cx="210" cy="210" r="180"/></g>
+      <circle cx="210" cy="210" r="52" fill="url(#tg)" stroke="#2C2A4A" stroke-width="4"/>
+      <g stroke="#2C2A4A" stroke-width="3"><circle cx="300" cy="210" r="13" fill="#9FD3FF"/><circle cx="115" cy="122" r="10" fill="#FFB49A"/><circle cx="330" cy="330" r="27" fill="#F6D8B8"/><circle cx="62" cy="290" r="20" fill="#FFF0C4"/></g>
+      <ellipse cx="62" cy="290" rx="36" ry="11" fill="none" stroke="#2C2A4A" stroke-width="3" transform="rotate(-18 62 290)"/>
+      <path d="M318 322h24M318 338h24" stroke="#C8956A" stroke-width="4"/>
+      <g fill="#2C2A4A"><circle cx="195" cy="200" r="4"/><circle cx="225" cy="200" r="4"/></g><path d="M193 222q17 14 34 0" fill="none" stroke="#2C2A4A" stroke-width="4" stroke-linecap="round"/>
+      <g fill="#FFFFFF" stroke="#C9BEF0" stroke-width="1.5"><path d="M380 70l5 10 10 5-10 5-5 10-5-10-10-5 10-5z"/><path d="M50 60l4 8 8 4-8 4-4 8-4-8-8-4 8-4z"/></g>
+    </svg>
+  </div>
+</section>
+
+<!-- 2 hook -->
+<section class="slide s-hook" id="hook" data-phase="פתיחה · 3 דק׳" data-min="3" aria-label="שאלת פתיחה">
+  <h2>🚀 שאלת פתיחה: אנחנו בכלל לא יושבים במקום!</h2>
+  <p class="big">כדור הארץ – וכל מי שנמצא עליו – נע כל הזמן סביב השמש.<br><strong>נחשו: כמה קילומטרים נעבור בחלל במהלך השיעור הזה (45 דקות)?</strong></p>
+  <ol class="choices" aria-label="אפשרויות">
+    <li><span class="n">1</span> 0 – אנחנו עומדים במקום</li>
+    <li><span class="n">2</span> בערך 100 ק״מ</li>
+    <li><span class="n">3</span> בערך 8,000 ק״מ</li>
+    <li><span class="n">4</span> בערך 80,000 ק״מ</li>
+  </ol>
+  <p class="howto">✋ הצביעו באצבעות: 1, 2, 3 או 4. ספרו לחבר או לחברה לידכם למה בחרתם.</p>
+  <button type="button" class="btn big-btn" data-reveal="hook-ans" aria-expanded="false">גילוי התשובה</button>
+  <div class="reveal-box" id="hook-ans" hidden>
+    <p><strong>4 – בערך 80,000 ק״מ!</strong> כדור הארץ נע סביב השמש במהירות של כ־30 ק״מ <u>בכל שנייה</u>. ב־45 דקות זה בערך פעמיים סביב כל כדור הארץ.</p>
+    <p>אז למה אנחנו לא מרגישים? כי הכול נע יחד איתנו – כמו במטוס שטס בשקט.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" id="what" data-phase="הקנייה · 7–10 דק׳" data-min="8" aria-label="מה זה מערכת השמש">
+  <h2>☀️ מה זה מערכת השמש?</h2>
+  <div class="two">
+    <ul class="points">
+      <li><b>במרכז: השמש</b> – כוכב.</li>
+      <li><b>סביב השמש נעים 8 כוכבי לכת</b> במסלולים, וגם כוכבי לכת ננסיים, אסטרואידים ושביטים.</li>
+      <li><b>סביב רוב כוכבי הלכת נעים ירחים.</b> הירח שלנו מקיף את כדור הארץ.</li>
+      <li><b>מערכת השמש היא רק חלק קטן מגלקסיית שביל החלב</b>, שיש בה יותר מ־100 מיליארד כוכבים.</li>
+    </ul>
+    <figure class="address">
+      <figcaption>הכתובת שלנו ביקום</figcaption>
+      <ol>
+        <li class="c-pink">🏫 הכיתה שלנו</li>
+        <li class="c-peach">🇮🇱 ישראל</li>
+        <li class="c-sky">🌍 כדור הארץ</li>
+        <li class="c-butter">☀️ מערכת השמש</li>
+        <li class="c-lilac">🌌 גלקסיית שביל החלב</li>
+        <li class="c-mint">✨ היקום</li>
+      </ol>
+    </figure>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" id="sun" data-phase="הקנייה · 7–10 דק׳" data-min="8" aria-label="השמש">
+  <h2>🌞 השמש – הכוכב שלנו</h2>
+  <div class="tiles">
+    <div class="tile c-butter"><span class="ico" aria-hidden="true">🔥</span><b>כוכב</b><p>כדור ענק של גז לוהט שמפיק אור וחום. השמש היא לא כוכב לכת.</p></div>
+    <div class="tile c-peach"><span class="ico" aria-hidden="true">📏</span><b>ענקית</b><p>הקוטר שלה שווה לבערך 109 כדורי ארץ בשורה.</p></div>
+    <div class="tile c-pink"><span class="ico" aria-hidden="true">⚖️</span><b>כמעט הכול</b><p>כ־99.8% מכל החומר במערכת השמש נמצא בשמש.</p></div>
+    <div class="tile c-sky"><span class="ico" aria-hidden="true">💡</span><b>אור בדרך</b><p>האור שלה מגיע אלינו בתוך כ־8 דקות ו־20 שניות.</p></div>
+  </div>
+  <p class="callout">בלי השמש אין חיים: היא נותנת אור וחום, הצמחים מייצרים בעזרתה מזון, והיא מניעה את מחזור המים.</p>
+</section>
+
+<!-- 5 -->
+<section class="slide" id="planets" data-phase="הקנייה · 7–10 דק׳" data-min="8" aria-label="שמונה כוכבי הלכת">
+  <h2>🪐 שמונה כוכבי הלכת – לפי הסדר מהשמש</h2>
+  <div class="lineup" role="list">
+    <div class="lu-sun" role="listitem" aria-label="השמש">☀️<span>השמש</span></div>
+    <div class="lu-group rocky" role="listitem"><p class="gl">כוכבי לכת סלעיים (פנימיים)</p>
+      <ul><li><i class="dot" style="--c:#B9B1A8;--d:.7"></i>חמה</li><li><i class="dot" style="--c:#F2C877;--d:1"></i>נוגה</li><li><i class="dot" style="--c:#5AA6EA;--d:1"></i>כדור הארץ</li><li><i class="dot" style="--c:#E4775B;--d:.8"></i>מאדים</li></ul></div>
+    <div class="lu-belt" role="listitem">חגורת<br>האסטרואידים</div>
+    <div class="lu-group giants" role="listitem"><p class="gl">ענקי גז וקרח (חיצוניים)</p>
+      <ul><li><i class="dot" style="--c:#D9A67A;--d:2"></i>צדק</li><li><i class="dot ring" style="--c:#E7CC85;--d:1.8"></i>שבתאי</li><li><i class="dot" style="--c:#8FD3D8;--d:1.4"></i>אורנוס</li><li><i class="dot" style="--c:#6E8EE8;--d:1.4"></i>נפטון</li></ul></div>
+  </div>
+  <div class="mnemonic c-lilac">
+    <p><b>טריק לזכירת הסדר</b> (האות הראשונה של כל מילה = כוכב לכת, א = ארץ):</p>
+    <p class="mn" lang="he"><b>ח</b>יים <b>נ</b>כנס <b>א</b>תמול <b>מ</b>הר, <b>צ</b>עק: ״<b>ש</b>וקולד <b>א</b>ין? <b>נ</b>ו!״</p>
+    <p class="small">אתגר: המציאו בזוגות משפט משלכם!</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" id="motion" data-phase="הקנייה · 7–10 דק׳" data-min="8" aria-label="תנועה ומחזוריות">
+  <h2>🔄 תנועה יוצרת זמן: יממה, חודש ושנה</h2>
+  <div class="tiles three">
+    <div class="tile c-sky"><span class="ico" aria-hidden="true">🌗</span><b>יממה ≈ 24 שעות</b><p>כדור הארץ מסתובב סביב צירו. הצד שפונה לשמש – יום, והצד השני – לילה.</p></div>
+    <div class="tile c-lilac"><span class="ico" aria-hidden="true">🌙</span><b>חודש ≈ 29½ ימים</b><p>הירח מקיף את כדור הארץ. בערך כל 29½ ימים חוזר אותו מראה של הירח (למשל ירח מלא).</p></div>
+    <div class="tile c-butter"><span class="ico" aria-hidden="true">☀️</span><b>שנה ≈ 365¼ ימים</b><p>כדור הארץ מקיף את השמש פעם אחת.</p></div>
+  </div>
+  <p class="callout big"><b>הרעיון החשוב:</b> לכל כוכב לכת יש ״שנה״ משלו – הזמן שלוקח לו להקיף את השמש פעם אחת. <br>❓ האם לכל כוכבי הלכת שנה באותו אורך? עוד מעט נחזה ונבדוק.</p>
+</section>
+
+<!-- 7 animation -->
+<section class="slide s-anim" id="anim" data-phase="הקנייה והדגמה" data-min="3" aria-label="אנימציה של מערכת השמש">
+  <div class="anim-grid">
+    <div class="canvas-wrap space"><canvas id="solar-main" role="img" aria-label="אנימציה של מערכת השמש: השמש במרכז ושמונה כוכבי לכת שנעים סביבה במסלולים, כל אחד במהירות היחסית שלו. אפשר ללחוץ על כוכב לכת כדי לקרוא עליו."></canvas></div>
+    <div class="anim-panel">
+      <h2>🌌 מערכת השמש בתנועה</h2>
+      <div class="scale-note"><p><b>⚠️ לא בקנה מידה:</b> הגדלים והמרחקים כאן לא אמיתיים – אי אפשר להראות את שניהם נכון על מסך אחד. <b>זמני ההקפה נכונים בקירוב.</b></p>
+        <details><summary>ואיך זה באמת?</summary><p>כוכבי הלכת כאן גדולים בהרבה, והמסלולים צפופים בהרבה. אילו השמש הייתה בגודל כדורגל (22 ס״מ), כדור הארץ היה בגודל של כ־2 מ״מ ובמרחק של כ־24 מטרים ממנה, ונפטון היה במרחק של כ־700 מטרים! <a href="#sizes" data-goto="sizes">לגדלים היחסיים ←</a></p></details></div>
+      <div class="ctrls" role="group" aria-label="שליטה באנימציה" data-ctrl="solar-main">
+        <button type="button" class="btn" data-act="play" aria-pressed="false">▶ הפעלה</button>
+        <button type="button" class="btn ghost" data-act="year">שנה אחת ועצירה</button>
+        <button type="button" class="btn ghost" data-act="reset">↺ איפוס</button>
+        <label class="spd">מהירות <input type="range" min="0" max="8" step="1" value="2" data-act="speed" aria-describedby="spd-main"> <output id="spd-main" class="spd-out"></output></label>
+        <label class="chk"><input type="checkbox" data-act="labels" checked> שמות</label>
+        <label class="chk"><input type="checkbox" data-act="laps"> מונה הקפות</label>
+      </div>
+      <p class="clock" aria-live="off">חלפו: <b data-out="years">0.00</b> שנים בכדור הארץ (<span data-out="days">0</span> ימים)</p>
+      <div class="chips" role="group" aria-label="בחירת גרם שמים" data-chips="solar-main"></div>
+      <div class="factcard" id="fact-main" aria-live="polite"><p class="muted">👆 הקישו על כוכב לכת (או על הכפתורים) כדי לקרוא עליו.</p></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 8 predict -->
+<section class="slide s-task" id="predict" data-phase="משימה בזוגות · 7 דק׳" data-min="7" aria-label="משימה: חזו ובדקו">
+  <div class="task-grid">
+    <div>
+      <p class="tag c-mint">משימה 1 · בזוגות · 7 דק׳</p>
+      <h2>🔮 חזו ובדקו</h2>
+      <ol class="steps">
+        <li><b>חוזים (3 דק׳):</b> כתבו בדף העבודה את התחזית שלכם, לפני שמפעילים:
+          <ol class="qs qs-heb">
+            <li>כשכדור הארץ ישלים הקפה אחת סביב השמש – כמה הקפות תשלים חמה?</li>
+            <li>מי נע מהר יותר במסלול: כוכבי לכת קרובים לשמש או רחוקים ממנה?</li>
+            <li>כמה שנים של כדור הארץ יעברו עד שצדק ישלים הקפה אחת?</li>
+          </ol></li>
+        <li><b>בודקים (2 דק׳):</b> מפעילים ״שנה אחת״ ואחר כך ״12 שנים״ וסופרים הקפות.</li>
+        <li><b>מסבירים (2 דק׳):</b> למה לנפטון לוקחת הקפה אחת כ־165 שנים? מצאו שתי סיבות.</li>
+      </ol>
+      <button type="button" class="btn ghost" data-reveal="predict-ans" aria-expanded="false">הצגת התשובות</button>
+      <div class="reveal-box" id="predict-ans" hidden>
+        <p>א. בערך 4 הקפות (שנה בחמה = 88 ימים). ב. הקרובים – הם נעים מהר יותר וגם המסלול שלהם קצר יותר. ג. כמעט 12 שנים.</p>
+        <p>נפטון: (1) המסלול שלו ארוך מאוד; (2) הוא נע לאט יותר מכוכבי הלכת הקרובים לשמש.</p>
+      </div>
+    </div>
+    <div class="mini">
+      <div class="canvas-wrap space"><canvas id="solar-mini" role="img" aria-label="אנימציה לבדיקת התחזיות: מונה הקפות ליד כל כוכב לכת."></canvas></div>
+      <div class="ctrls" role="group" aria-label="שליטה באנימציה לבדיקה" data-ctrl="solar-mini">
+        <button type="button" class="btn" data-act="year">שנה אחת</button>
+        <button type="button" class="btn" data-act="years12">12 שנים</button>
+        <button type="button" class="btn ghost" data-act="play" aria-pressed="false">▶ הפעלה</button>
+        <button type="button" class="btn ghost" data-act="reset">↺ איפוס</button>
+      </div>
+      <p class="clock">חלפו: <b data-out="years">0.00</b> שנים · המספר ליד כל שם = מספר ההקפות</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9 sizes -->
+<section class="slide s-task" id="sizes" data-phase="משימה בזוגות · 3 דק׳" data-min="3" aria-label="משימה: גדלים יחסיים">
+  <p class="tag c-mint">משימה 2 · בזוגות · 3 דק׳</p>
+  <h2>📏 גדלים יחסיים</h2>
+  <p class="big">סדרו בדף העבודה את 8 כוכבי הלכת <b>מהקטן לגדול</b>. אחר כך: כמה כדורי ארץ נכנסים לרוחבו של צדק?</p>
+  <button type="button" class="btn" id="sizes-btn" aria-expanded="false">גילוי: כוכבי הלכת בקנה מידה של גודל</button>
+  <div class="sizes-stage" id="sizes-stage" aria-live="polite">
+    <p class="muted center">כאן יופיעו כוכבי הלכת בגודל היחסי האמיתי שלהם.</p>
+  </div>
+  <p class="small" id="sizes-note" hidden>כאן <b>הגדלים</b> בקנה מידה, אבל <b>המרחקים לא</b>: באמת הם רחוקים מאוד זה מזה. צדק רחב בערך פי 11 מכדור הארץ, והשמש – פי 109. בצד ימין רואים רק חלק קטן מקצה השמש.</p>
+</section>
+
+<!-- 10 age -->
+<section class="slide s-task" id="age" data-phase="משימה בקבוצות · 6 דק׳" data-min="6" aria-label="משימה: בני ובנות כמה הייתם בכוכב לכת אחר">
+  <div class="task-grid">
+    <div>
+      <p class="tag c-mint">משימה 3 · בקבוצות של 3–4 · 6 דק׳</p>
+      <h2>🎂 בני ובנות כמה הייתם בכוכב לכת אחר?</h2>
+      <p>הגיל שלנו נמדד בשנים של כדור הארץ. בכוכב לכת שהשנה בו ארוכה – הייתם ״צעירים״ יותר!</p>
+      <ol class="qs">
+        <li>באיזה כוכב לכת הייתם הכי ״מבוגרים״? למה?</li>
+        <li>בני ובנות כמה תהיו בכדור הארץ כשתעבור שנה אחת בשבתאי?</li>
+        <li>אתגר: האם בנפטון אפשר לחגוג יום הולדת 1? הסבירו.</li>
+      </ol>
+      <p class="small">איך מחשבים? גיל בכדור הארץ ÷ אורך השנה של כוכב הלכת (בשנים של כדור הארץ). קודם הַעריכו, ורק אחר כך בדקו במחשבון.</p>
+    </div>
+    <div class="agecalc c-sky">
+      <label for="age-in"><b>הגיל שלי בכדור הארץ:</b></label>
+      <div class="row"><input id="age-in" type="number" min="1" max="120" step="1" value="11" inputmode="numeric"> <button type="button" class="btn" id="age-go">חישוב</button></div>
+      <table class="agetable" id="age-table" hidden>
+        <caption class="sr-only">הגיל בכל כוכב לכת</caption>
+        <thead><tr><th scope="col">כוכב לכת</th><th scope="col">שנה אחת בו</th><th scope="col">הגיל שלי שם</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 11 quiz -->
+<section class="slide s-task" id="quiz" data-phase="חידון בזק · 4 דק׳" data-min="4" aria-label="חידון בזק">
+  <p class="tag c-mint">משימה 4 · כל הכיתה · 4 דק׳</p>
+  <h2>⚡ חידון בזק</h2>
+  <p class="howto">כל התלמידים והתלמידות מצביעים יחד באצבעות (1–4), ורק אז לוחצים על תשובה.</p>
+  <div class="quiz" id="quiz-box" aria-live="polite"></div>
+  <div class="quiz-nav"><button type="button" class="btn ghost" id="quiz-prev">השאלה הקודמת</button><span id="quiz-count"></span><button type="button" class="btn ghost" id="quiz-next">השאלה הבאה</button></div>
+</section>
+
+<!-- 12 model choice board -->
+<section class="slide s-task" id="model" data-phase="משימה בקבוצות · 7 דק׳" data-min="7" aria-label="משימה: בונים מודל – לוח בחירה">
+  <p class="tag c-mint">משימה 5 · בקבוצות · 7 דק׳</p>
+  <h2>🛠️ בונים מודל של מערכת השמש – בחרו דרך</h2>
+  <div class="board">
+    <div class="way c-peach"><b>🧍 מודל אנושי</b><p>כל אחת ואחד הם השמש או כוכב לכת, והולכים במסלולים.</p><p class="crit">✔ הסדר נכון · הקרובים הולכים מהר יותר ובמסלול קצר יותר</p></div>
+    <div class="way c-butter"><b>🟠 דגם בפלסטלינה</b><p>שמש ו־8 כוכבי לכת מפלסטלינה או מנייר מקומט.</p><p class="crit">✔ צדק הכי גדול, חמה הכי קטן, נוגה וכדור הארץ כמעט שווים</p></div>
+    <div class="way c-mint"><b>🧻 מפת מרחקים</b><p>על גליל נייר או חוט: השמש בקצה, ונפטון אחרי 100 ריבועים.</p><p class="crit">✔ ארבעת הפנימיים צפופים ליד השמש, והחיצוניים רחוקים זה מזה</p></div>
+    <div class="way c-sky"><b>🎙️ ״אני כוכב לכת״</b><p>הקלטה או הצגה של 30–45 שניות בגוף ראשון.</p><p class="crit">✔ המקום מהשמש, אורך השנה ועוד 2 עובדות נכונות</p></div>
+    <div class="way c-pink"><b>✏️ גלויה מכוכב לכת</b><p>ציור או קומיקס ״שלום מ...״ לחברים בכדור הארץ.</p><p class="crit">✔ 3 עובדות נכונות והשוואה אחת לכדור הארץ</p></div>
+    <div class="way c-lilac"><b>📊 טבלת השוואה</b><p>משווים בין 2 כוכבי לכת בטבלה או בכרזה.</p><p class="crit">✔ גודל, מרחק ואורך שנה – ומסקנה אחת</p></div>
+  </div>
+  <p class="small">בכל דגם: כתבו משפט אחד – מה הדגם שלכם מראה נכון, ומה לא.</p>
+</section>
+
+<!-- 13 challenge -->
+<section class="slide s-task" id="challenge" data-phase="אתגר להעשרה (רשות)" data-min="5" aria-label="אתגר חשיבה להעשרה">
+  <p class="tag c-lilac">אתגר להעשרה · לקבוצות שסיימו</p>
+  <h2>🤖 משימת חלל: לאן שולחים רובוט חוקר?</h2>
+  <div class="two">
+    <div>
+      <p class="big">אתם צוות של מהנדסות ומהנדסים בסוכנות חלל. יש לכם רובוט חוקר אחד.</p>
+      <ol class="qs">
+        <li>בחרו כוכב לכת או ירח שאליו תשלחו את הרובוט.</li>
+        <li>נמקו את הבחירה בשתי סיבות.</li>
+        <li>איזה אתגר אחד הרובוט יפגוש שם? (חום, קור, רוחות, מרחק...) ואיך תתגברו עליו?</li>
+      </ol>
+    </div>
+    <div class="callout c-butter">
+      <p><b>רמז:</b> אפשר לחקור מקום שקשה להגיע אליו בעזרת טלסקופים (על פני כדור הארץ ובחלל), לוויינים, חלליות ורכבים רובוטיים.</p>
+      <p>👀 הקישו על כוכב לכת באנימציה כדי למצוא נתונים לנימוק.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 14 summary -->
+<section class="slide" id="summary" data-phase="איסוף וסיכום · 5 דק׳" data-min="5" aria-label="איסוף וסיכום">
+  <h2>🧺 איסוף וסיכום</h2>
+  <div class="tiles four">
+    <div class="tile c-butter"><span class="ico" aria-hidden="true">☀️</span><p>השמש במרכז מערכת השמש.</p></div>
+    <div class="tile c-sky"><span class="ico" aria-hidden="true">🪐</span><p>8 כוכבי לכת מקיפים את השמש, וירחים מקיפים כוכבי לכת.</p></div>
+    <div class="tile c-mint"><span class="ico" aria-hidden="true">⏳</span><p>ככל שכוכב לכת רחוק יותר מהשמש – השנה בו ארוכה יותר.</p></div>
+    <div class="tile c-pink"><span class="ico" aria-hidden="true">🧩</span><p>דגם קטן אחד לא יכול להראות נכון גם גדלים וגם מרחקים.</p></div>
+  </div>
+  <p class="callout big">🗣️ <b>30 שניות בזוגות:</b> מה הדבר הכי מפתיע שגיליתם היום? 2–3 זוגות משתפים את הכיתה.</p>
+</section>
+
+<!-- 15 exit -->
+<section class="slide" id="exit" data-phase="כרטיס יציאה · חלק מהסיכום" data-min="3" aria-label="כרטיס יציאה">
+  <h2>🎟️ כרטיס יציאה</h2>
+  <ol class="exit">
+    <li>ציירו את השמש ושלושה כוכבי לכת – לפי הסדר הנכון מהשמש.</li>
+    <li>השלימו: ״השנה בנפטון ארוכה הרבה יותר מהשנה בכדור הארץ, כי...״</li>
+    <li>כתבו שאלה אחת על החלל שעדיין מסקרנת אתכם.</li>
+  </ol>
+  <p class="self">סמנו: 😀 הבנתי היטב · 🙂 כמעט · 🤔 צריך עוד עזרה</p>
+  <p class="small">כרטיס היציאה נמצא גם ב<a href="handout.html">דף העבודה להדפסה</a>.</p>
+</section>
+
+<!-- 16 credits -->
+<section class="slide s-credits" id="credits" data-phase="מקורות וקרדיטים" data-min="0" aria-label="מקורות וקרדיטים">
+  <h2>📚 מקורות וקרדיטים</h2>
+  <div class="two">
+    <div>
+      <h3>עובדות ונתונים</h3>
+      <ul class="src">
+        <li>NASA – <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/" target="_blank" rel="noopener">Planetary Fact Sheet</a> (קטרים, מרחקים, זמני הקפה וסיבוב, טמפרטורות, מספר ירחים)</li>
+        <li>NASA Science – <a href="https://science.nasa.gov/solar-system/" target="_blank" rel="noopener">Our Solar System</a> · <a href="https://science.nasa.gov/solar-system/planets/" target="_blank" rel="noopener">Planets</a> · <a href="https://science.nasa.gov/sun/facts/" target="_blank" rel="noopener">Sun: Facts</a> · <a href="https://science.nasa.gov/solar-system/moons/" target="_blank" rel="noopener">Moons</a></li>
+        <li>NASA Space Place – <a href="https://spaceplace.nasa.gov/years-on-other-planets/en/" target="_blank" rel="noopener">How long is a year on other planets?</a></li>
+      </ul>
+      <p class="small">* מספרי הירחים לפי דף העובדות של NASA. מדי פעם מתגלים ירחים חדשים, ולכן המספרים עשויים לגדול.</p>
+    </div>
+    <div>
+      <h3>תוכנית הלימודים</h3>
+      <ul class="src">
+        <li>משרד החינוך – <a href="https://meyda.education.gov.il/files/Pop/0files/mada-technology/yesodi/content-specifications-5th.docx" target="_blank" rel="noopener">מפרט תכנים במדע וטכנולוגיה לכיתה ה׳</a> (תחום מדעי כדור הארץ והיקום: ״מבנה מערכת השמש״)</li>
+        <li>משרד החינוך – <a href="https://pop.education.gov.il/tchumey_daat/mada-tehnologia/yesodi/technology-science-pedagogy/curriculum/" target="_blank" rel="noopener">תוכנית הלימודים במדע וטכנולוגיה לבית הספר היסודי</a> (מרחב פדגוגי)</li>
+      </ul>
+      <h3>איורים ואנימציה</h3>
+      <p>כל האיורים והאנימציה צוירו במיוחד למצגת הזו (בלי תמונות חיצוניות). הצבעים מקורבים ולא מדויקים.</p>
+      <p class="made-by">נוצר ע״י מור לנגר אפל · נבנה עם Kita</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<nav class="deck-nav" aria-label="ניווט במצגת">
+  <button type="button" class="nbtn" id="prev" aria-label="השקופית הקודמת">הקודמת ›</button>
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  <span class="counter" id="counter" aria-live="polite">1 / 16</span>
+  <button type="button" class="nbtn primary" id="next" aria-label="השקופית הבאה">‹ הבאה</button>
+</nav>
+
+<aside class="notes" id="notes" hidden aria-label="הערות למורה לשקופית הנוכחית">
+  <div class="notes-head"><b>🔐 הערות למורה</b> <span id="notes-slide"></span>
+    <button type="button" class="tbtn sm" id="notes-popout">חלון נפרד</button>
+    <button type="button" class="tbtn sm" id="notes-close" aria-label="סגירת ההערות">✕</button></div>
+  <div class="notes-body" id="notes-body"></div>
+</aside>
+
+<dialog class="gate" id="gate" aria-labelledby="gate-h">
+  <form method="dialog" id="gate-form">
+    <h2 id="gate-h">🔐 הערות למורה</h2>
+    <p>ההערות מיועדות למורה. הקלידו את הקוד:</p>
+    <label for="gate-pw" class="sr-only">קוד מורה</label>
+    <input id="gate-pw" type="password" inputmode="numeric" autocomplete="off">
+    <p class="err" id="gate-err" role="alert" hidden>הקוד לא נכון. נסו שוב.</p>
+    <div class="row"><button type="submit" class="btn" value="ok">כניסה</button><button type="button" class="btn ghost" id="gate-cancel">ביטול</button></div>
+  </form>
+</dialog>
+
+<div class="sr-only" id="announce" aria-live="polite"></div>
+<script type="text/plain" id="teacher-data">eyJ0aXRsZSI6ICI8cD48Yj7XnteY16jXqiDXlNep15nXoteV16g6PC9iPiDXqtec157XmdeT15nXnSDXldeq15zXnteZ15PXldeqINeZ16rXkNeo15Ug15DXqiDXnteR16DXlCDXntei16jXm9eqINeU16nXntepICjXlNep157XqSDXkdee16jXm9eWLCDXm9eV15vXkdeZINec15vXqiDXldeZ16jXl9eZ150g15HXnteh15zXldec15nXnSwg15fXnNenINee16nXkdeZ15wg15TXl9ec15EpLCDXmden16nXqNeVINeR15nXnyDXnteo15fXpyDXnteU16nXntepINec15DXldeo15og15TXqdeg15QsINeV15nXkdeZ16DXlSDXnteUINeT15LXnSDXnteo15DXlCDXldee15Qg15zXkC48L3A+XG48dWw+PGxpPtee15HXoNeUINec16TXmSDXkdeo15nXqNeqINeU157Xl9eT15wg16nXnNeaOiDXpNeq15nXl9eUIDPXsyDCtyDXlNen16DXmdeZ15QgN+KAkzEw17Mgwrcg157XqdeZ157XldeqINeb1r4yN9ezIMK3INeQ15nXodeV16Mg15XXodeZ15vXldedIDXXsy48L2xpPlxuPGxpPtec16TXoNeZINeU16nXmdei15XXqDog15zXl9ec16cg15PXoyDXoteR15XXk9eUICjXp9eZ16nXldeoINeR16TXldeY16gpINec15vXnCDXqtec157XmdeTINeV16rXnNee15nXk9eULCDXldec15TXm9eZ158g15fXldee16jXmdedINec15zXldeXINeU15HXl9eZ16jXlCAo16TXnNeh15jXnNeZ16DXlCwg16DXmdeZ16gg15jXldeQ15zXmC/Xl9eV15gsINeT16TXmdedKS48L2xpPlxuPGxpPtee16HXmiDXntec15A6INeb16TXqteV16gg4pu2INeQ15Ug157Xp9epIEYuINeU15fXnNeV158g15TXoNek16jXkyDXqdecINeU15TXoteo15XXqiDXnteq15DXmdedINec157XodeaINep16DXmSAo15TXnteX16nXkSDXqdec15opLCDXm9eaINep15TXm9eZ16rXlCDXnNeQINeo15XXkNeUINeQ15XXqtefLjwvbGk+PC91bD4iLCAiaG9vayI6ICI8cD48Yj4zINeT16fXsy48L2I+INep15DXnNeUINee16LXldeo16jXqiDXoden16jXoNeV16og16nXm9ecINeU15vXmdeq15Qg16LXldeg15Qg16LXnNeZ15Qg15HXkdeqINeQ15fXqiAo15DXpteR16LXldeqIDHigJM0KS48L3A+XG48dWw+PGxpPteq16nXldeR15Q6IDxiPjQg4oCTINeb1r44MCwwMDAg16fXtNeePC9iPiAo15vWvjMwINen17TXniDXkdep16DXmdeZ15Qgw5cgMiw3MDAg16nXoNeZ15XXqiDiiYggODAsMDAwINen17TXnjsg15TXmden16Mg15vXk9eV16gg15TXkNeo16Ug15vWvjQwLDAwMCDXp9e0154sINeb15zXldee16gg15HXoteo15og16TXotee15nXmdedINee16HXkdeZ15HXlSkuPC9saT5cbjxsaT7XnNek16DXmSDXlNeS15nXnNeV15k6INec16nXkNeV15wgMuKAkzMg16rXnNee15nXk9eZ150g15XXqtec157XmdeT15XXqiDXnNee15Qg15HXl9eo15UuINec15Ag15zXqten158g16LXk9eZ15nXny48L2xpPlxuPGxpPtep15DXnNeqINeU157XqdeaINen16bXqNeUOiDXtNeQ15Yg15zXnteUINec15Ag157XqNeS15nXqdeZ150/17Qg4oCTINeU16rXoNeV16LXlCDXkNeX15nXk9eUINeV15TXm9eV15wg16DXoiDXmdeX15MgKNeb157XlSDXkdee15jXldehKS48L2xpPjwvdWw+IiwgIndoYXQiOiAiPHA+PGI+15TXp9eg15nXmdeUICjXqden15XXpNeZ15XXqiAz4oCTNyDXmdeX15M6IDfigJMxMCDXk9en17MpLjwvYj4g15vWvjEuNSDXk9en17Mg15zXqden15XXpNeZ16og15TXlteVLjwvcD5cbjx1bD48bGk+15TXqdee16kg15TXmdeQIDxiPteb15XXm9eRPC9iPjsg15vXldeb15HXmSDXnNeb16og15zXkCDXntek15nXp9eZ150g15DXldeoINee16nXnNeU150sINeU150g157Xl9eW15nXqNeZ150g15DXqiDXkNeV16gg15TXqdee16kuPC9saT5cbjxsaT7XtNeU15vXqteV15HXqiDXqdec16DXlSDXkdeZ16fXlded17Q6INec15HXp9epINee16rXnNee15nXkyDXkNeVINeq15zXnteZ15PXlCDXnNen16jXldeQINee15zXntei15zXlCDXnNee15jXlCwg15XXkNeWINee15zXnteY15Qg15zXntei15zXlCDigJMg15vXnCDXqdec15Eg157Xm9eZ15wg15DXqiDXlNen15XXk9edLjwvbGk+XG48bGk+157XpNeo15gg15TXqteb16DXmdedINec15vXmdeq15Qg15TXszog17TXlNeq15zXnteZ15PXmdedINeZ15vXmdeo15Ug15DXqiDXnteR16DXlCDXntei16jXm9eqINeU16nXntepINeV15nXkdeZ16DXlSDXm9eZINeU15nXkCDXl9ec16cg157Xktec16fXodeZ15nXqiDXqdeR15nXnCDXlNeX15zXkS7XtDwvbGk+PC91bD4iLCAic3VuIjogIjx1bD48bGk+15vWvjEuNSDXk9en17MuINeQ16TXqdeoINec16nXkNeV15w6INe015DXmdeaINeZ15XXk9ei15nXnSDXqdeU15DXldeoINep15DXoNeX16DXlSDXqNeV15DXmdedINeZ16bXkCDXnteU16nXntepINec16TXoNeZINeb1r44INeT16fXldeqP9e0ICjXlNee15TXmdeo15XXqiDXqdecINeU15DXldeoINeV15TXnteo15fXpyDXmdeT15XXoteZ150pLjwvbGk+XG48bGk+4pqg77iPINeR15jXmdeX15XXqjog15zXoteV15zXnSDXnNeQINee16HXqteb15zXmdedINeZ16nXmdeo15XXqiDXotecINeU16nXntepLCDXktedINec15Ag15HXntep16fXpNeqINeQ15Ug15HXmNec16HXp9eV16QuPC9saT5cbjxsaT7XlNeg16rXldeg15nXnSDXnta+TkFTQTog16fXldeY16gg15vWvjEuMzkg157Xmdec15nXldefINen17TXniAo15vWvjEwOSDXm9eT15XXqNeZINeQ16jXpSksINeb1r45OS44JSDXnteU157XodeUINep15wg157Xoteo15vXqiDXlNep157XqS48L2xpPjwvdWw+IiwgInBsYW5ldHMiOiAiPHVsPjxsaT7Xm9a+MiDXk9en17MuINec15TXqNeQ15XXqiDXkNeqINeU15fXnNeV16fXlDogNCDXodec16LXmdeZ150g16fXmNeg15nXnSDXp9eo15XXkdeZ150sINeX15LXldeo16og15DXodeY16jXldeQ15nXk9eZ150sIDQg16LXoNen15nXmdedINeo15fXlden15nXnS48L2xpPlxuPGxpPtek15zXldeY15U6INee15DXliAyMDA2INee15XXkteT16gg17TXm9eV15vXkSDXnNeb16og16DXoNeh15nXtC4g15DXnSDXoteV15zXlCDXqdeQ15zXlCDigJMg15bXlSDXlNeW15PXnteg15XXqiDXnNeU16jXkNeV16og16nXnteT16Ig157Xqtei15PXm9efINeb16nXmdepINee15nXk9eiINeX15PXqS48L2xpPlxuPGxpPtee16nXpNeYINeU15bXmdeb16jXldefOiDXkNek16nXqCDXnNeq16og15zXlteV15LXldeqINeT16fXlCDXnNeU157XpteZ15Ag157Xqdek15gg157Xqdec15TXnSAo15DXlSDXnNeU16nXkNeZ16gg15zXkdeZ16opLjwvbGk+PC91bD4iLCAibW90aW9uIjogIjx1bD48bGk+15vWvjEuNSDXk9en17MuINeX15bXqNeUINei15wg16rXldek16LXldeqINee15fXlteV16jXmdeV16ogKNeU157XpNeo15gg157Xkden16kg15zXl9eW15XXqCDXotecINeZ15XXnSwg15zXmdec15QsINeZ157XnteULCDXl9eV15PXqSDXldep16DXlCkuPC9saT5cbjxsaT7XkNek16nXqCDXnNeU15PXkteZ150g15HXkteV16M6INeq15zXnteZ15Mg15DXlSDXqtec157XmdeT15Qg157Xodeq15XXkdeR15nXnSDXodeR15nXkSDXotem157XnSAo15nXntee15QpINeV157Xp9eZ16TXmdedINeQ16og17TXlNep157Xqde0ICjXqdeg15QpLjwvbGk+XG48bGk+15zXodeZ15nXnSDXkdep15DXnNeUINeU16TXqteV15fXlCDigJMg15zXkCDXnNei16DXldeqINei15zXmdeUISDXlNeq16nXldeR15Qg16rXqteS15zXlCDXkdee16nXmdee15QgMS48L2xpPjwvdWw+IiwgImFuaW0iOiAiPHA+PGI+15TXk9eS157XlCAoMuKAkzMg15PXp9ezKSDigJMg15XXkNeX16gg15vXmiDXntep157XqdeqINeQ16og15TXntep15nXnteV16ouPC9iPjwvcD5cbjx1bD48bGk+15TXkNeg15nXntem15nXlCDXnteq15fXmdec15Qg15zXpNei15XXnCDXm9ep16DXm9eg16HXmdedINec16nXp9eV16TXmdeqICjXkNedINeR157Xm9ep15nXqCDXnNeQINeg15HXl9eoINe015TXpNeX16rXqiDXqteg15XXoteU17QpLjwvbGk+XG48bGk+15zXlNeo15DXldeqOiDXnNeX15nXpteUINei15wg15vXldeb15Eg15zXm9eqINek15XXqteX16og15vXqNeY15nXoSDXoteV15HXk9eV16o7INee15TXmdeo15XXqjogw5cxID0g16nXoNeUINeR15vXk9eV16gg15TXkNeo16Ug15HWvjEwINep16DXmdeV16o7INe0157Xldeg15Qg15TXp9ek15XXqte0INee16bXmdeSINeb157XlCDXlNen16TXldeqINeU15XXqdec157XlS48L2xpPlxuPGxpPtec15TXk9eS15nXqSDXkNeqINeU15TXoteo15Qg17TXnNeQINeR16fXoNeUINee15nXk9eU17Q6IDxiPteW157XoNeZINeU15TXp9ek15Q8L2I+INeZ15fXodeZ15nXnSDXldeg15vXldeg15nXnSDXkden15nXqNeV15EgKNec16TXmSBOQVNBKSwg15DXkdecINeU15LXk9ec15nXnSDXldeU157XqNeX16fXmdedINee15XXkteT15zXmdedL9ee15vXldeV16bXmdedLjwvbGk+XG48bGk+15TXmdeo15cg157Xldem15Ig16HXkdeZ15Eg15vXk9eV16gg15TXkNeo16Ug16jXpyDXkdee15TXmdeo15XXqiDDlzIg15XXnteY15QgKNeR157XlNeZ16jXldeqINeS15HXldeU15Qg15TXldeQINeU15nXlCDXnteU15HXlNeRKS48L2xpPlxuPGxpPtec15Ag15zXktec15XXqiDXoteT15nXmdefINep15TXp9eo15XXkdeZ150g157XlNeZ16jXmdedINeZ15XXqteoIOKAkyDXlteVINeU16rXl9eW15nXqiDXqdecINee16nXmdee15QgMS48L2xpPjwvdWw+IiwgInByZWRpY3QiOiAiPHA+PGI+157XqdeZ157XlCAxIOKAkyDXl9eW15Ug15XXkdeT16fXlSAoNyDXk9en17MsINeW15XXkteV16opLjwvYj4g16jXnteV16og15fXqdeZ15HXlDog15fXmdeW15XXmSDihpAg15HXk9eZ16fXlCDihpAg15TXodeR16guPC9wPlxuPHVsPjxsaT7Xqtep15XXkdeV16o6INeQLiDXm9a+NCDXlNen16TXldeqICgzNjUgw7cgODgg4omIIDQuMSkuINeRLiDXlNen16jXldeR15nXnSDXnteU15nXqNeZ150g15nXldeq16ggKNeX157XlCDXm9a+NDcg16fXtNeeINeR16nXoNeZ15nXlCwg16DXpNeY15XXnyDXm9a+NSkuINeSLiDXm9ee16LXmCAxMiDXqdeg15nXnSAoMTEuOSkuPC9saT5cbjxsaT7XlNeh15HXqCDXnNeg16TXmNeV1586INee16HXnNeV15wg15DXqNeV15og157XkNeV15MgKyDXnteU15nXqNeV16og16DXnteV15vXlCDXmdeV16rXqC48L2xpPlxuPGxpPte016nXoNeUINeQ15fXqte0INee15DXpNehINeV157XqNeZ16Ug16nXoNeUICgxMCDXqdeg15nXldeqKS4g17QxMiDXqdeg15nXnde0INee15DXpNehINeV157XqNeZ16UgMTIg16nXoNeZ150g15HXnteU15nXqNeV16ogw5cxMCAo15vWvjEyINep16DXmdeV16opLiDXlNee16HXpNeoINec15nXkyDXm9ecINep150gPSDXlNen16TXldeqINep15TXldep15zXnteVLjwvbGk+XG48bGk+15fXqdeV15E6INen15XXk9edINeb15XXqteR15nXnSDXqteX15bXmdeqLCDXqNenINeQ15fXqCDXm9eaINeR15XXk9en15nXnS4g16rXl9eW15nXqiDXtNec15Ag16DXm9eV16DXlNe0INeU15nXkCDXl9ec16cg157XlNee15PXoi48L2xpPjwvdWw+IiwgInNpemVzIjogIjxwPjxiPtee16nXmdee15QgMiDigJMg15LXk9ec15nXnSDXmdeX16HXmdeZ150gKDMg15PXp9ezLCDXlteV15LXldeqKS48L2I+PC9wPlxuPHVsPjxsaT7XlNeh15PXqCDXnteU16fXmNefINec15LXk9eV15w6INeX157XlCwg157XkNeT15nXnSwg16DXldeS15QsINeb15PXldeoINeU15DXqNelLCDXoNek15jXldefLCDXkNeV16jXoNeV16EsINep15HXqteQ15ksINem15PXpy48L2xpPlxuPGxpPteg15XXkteUINeV15vXk9eV16gg15TXkNeo16Ug15vXntei15gg16nXldeV15nXnSAo16DXldeS15Qg157XoteYINen15jXnyDXmdeV16rXqCkuINeQ15XXqNeg15XXoSDXntei15gg15LXk9eV15wg157XoNek15jXldefLjwvbGk+XG48bGk+15vWvjExINeb15PXldeo15kg15DXqNelINeR16jXldeX15Eg16bXk9enOyDXm9a+MTA5INeR16jXldeX15Eg15TXqdee16kuPC9saT5cbjxsaT7XkNeX16jXmSDXlNeS15nXnNeV15k6INe015zXnteUINeQ15kg15DXpNep16gg15zXlNeo15DXldeqINeb15DXnyDXktedINeQ16og15TXnteo15fXp9eZ150/17QgKNeU157XodeaINeU15nXlCDXpteo15nXmiDXnNeU15nXldeqINeR16jXldeX15Eg16nXnCDXp9eZ15zXldee15jXqNeZ150g16jXkdeZ150pLjwvbGk+PC91bD4iLCAiYWdlIjogIjxwPjxiPtee16nXmdee15QgMyDigJMg15HXoNeZINeV15HXoNeV16og15vXnteUINeU15nXmdeq150/ICg2INeT16fXsywg16fXkdeV16bXldeqKS48L2I+INeW15Ug15PXldeS157XlCDXtNec15zXnteZ15PXlCDXodeR15nXkSDXkNeq15LXqNe0INep157Xldek15nXoteUINeR157XpNeo15gg15TXqteb16DXmdedINec15vXmdeq15Qg15TXsy48L3A+XG48dWw+PGxpPteq16nXldeR15XXqiDXnNeS15nXnCAxMTog15fXnteUIOKJiCA0NS43IMK3INeg15XXkteUIOKJiCAxNy45IMK3INeb15PXldeoINeU15DXqNelIDExIMK3INee15DXk9eZ150g4omIIDUuOCDCtyDXpteT16cg4omIIDAuOTMgwrcg16nXkdeq15DXmSDiiYggMC4zNyDCtyDXkNeV16jXoNeV16Eg4omIIDAuMTMgwrcg16DXpNeY15XXnyDiiYggMC4wNy48L2xpPlxuPGxpPtep15DXnNeUIDE6INeR15fXnteUIOKAkyDXm9eZINep150g15TXqdeg15Qg15TXm9eZINen16bXqNeUICg4OCDXmdee15nXnSksINeQ15Yg17TXl9eV15LXkteZ153XtCDXlNeb15kg15TXqNeR15Qg15nXnteZINeU15XXnNeT16ouPC9saT5cbjxsaT7XqdeQ15zXlCAyOiDXqdeg15Qg15HXqdeR16rXkNeZIOKJiCAyOcK9INep16DXmdedINep15zXoNeVLCDXldec15vXnyDXkdeS15nXnCAxMSArIDI5wr0g4omIIDxiPjQw4oCTNDE8L2I+LjwvbGk+XG48bGk+16nXkNec15QgMzog15TXlNen16TXlCDXlNeo15DXqdeV16DXlCDXqdecINeg16TXmNeV158g15DXldeo15vXqiDXm9a+MTY1INep16DXmdedIOKAkyDXkNejINeQ15PXnSDXnNeQINeX15kg157Xodek15nXpyDXm9eT15kg15zXl9eS15XXkiDXqdedINeZ15XXnSDXlNeV15zXk9eqIDEuPC9saT5cbjxsaT7XlNeq15DXnteUOiDXqtec157XmdeT15nXnSDXldeq15zXnteZ15PXldeqINep157Xqten16nXmdedINeR15fXmdec15XXpyDigJMg15zXlNei16jXmdeaICjXtNeZ15XXqteoINeQ15Ug16TXl9eV16og157WvjE/17QpINeV15zXkdeT15XXpyDXkdee15fXqdeR15XXnzsg157Xqten15PXnteZ150g4oCTINec15fXqdeRINeS150g15HXmdee15nXnS48L2xpPjwvdWw+IiwgInF1aXoiOiAiPHA+PGI+157XqdeZ157XlCA0IOKAkyDXl9eZ15PXldefINeR15bXpyAoNCDXk9en17MsINeb15wg15TXm9eZ16rXlCkuPC9iPiA2INep15DXnNeV16og15HXotec15nXlCDXkdeo157XldeqINeX16nXmdeR15Q6INeW15XXm9eo15nXnSDihpAg157XkdeZ16DXmdedIOKGkCDXnteZ15nXqdee15nXnSDihpAg157XoNeq15fXmdedIOKGkCDXntei16jXmdeb15nXnS48L3A+XG48dWw+PGxpPteq16nXldeR15XXqjogMeKAk9eU16nXntepIMK3IDLigJPXl9ee15QgwrcgM+KAk9eh15nXkdeV15Eg16HXkdeZ15Eg15TXpteZ16ggwrcgNOKAk9eU16nXoNeUINeQ16jXldeb15Qg15nXldeq16ggwrcgNeKAk9eQ15XXldeZ16gg16LXkdeUINep15vXldec15Ag15fXldedIMK3IDbigJPXk9eS150g16fXmNefINec15Ag157XqNeQ15Qg15LXnSDXkteT15zXmdedINeV15LXnSDXnteo15fXp9eZ150uPC9saT5cbjxsaT7Xm9eV15zXnSDXntem15HXmdei15nXnSDXmdeX15Mg15HXkNem15HXoteV16ogKDHigJM0KSDXnNek16DXmSDXlNec15fXmdem15Qg4oCTINeb15og16jXldeQ15nXnSDXnteZ15Mg157XmSDXpteo15nXmiDXoteW16jXlCwg15XXm9ecINeU15vXmdeq15Qg16TXoteZ15zXlC48L2xpPlxuPGxpPteR16nXkNec15QgNSDigJMg15zXp9ep16gg15zXtNee15vXldeg15nXqiDXodeS15XXqNeUINeR16nXntep17QuINeR16nXkNec15QgNiDigJMg15zXp9ep16gg15zXntep15nXnteUIDUuPC9saT48L3VsPiIsICJtb2RlbCI6ICI8cD48Yj7Xntep15nXnteUIDUg4oCTINeR15XXoNeZ150g157XldeT15wgKDcg15PXp9ezLCDXp9eR15XXpteV16og16nXnCAz4oCTNCkuPC9iPiDXlteVINe015TXqteg16HXldeqINeU15fXldeR15TXtCDXkdee16TXqNeYOiDXtNeU16rXnNee15nXk9eZ150g15nXkdeg15Ug15PXktedINep15wg157Xoteo15vXqiDXlNep157XqSDXqteV15og15TXqteZ15nXl9eh15XXqiDXnNeS15XXk9ecINeU15LXldek15nXnSwg15zXnteo15fXpyDXkdeZ16DXmdeU150sINec157Xmden15XXntedINeW15Qg15HXmdeX16Eg15zXlteU17Qg4oCTINeV15TXntek16jXmCDXntee15zXmdelINec15TXodeq16TXpyDXkdee157XkyDXkNeZ15vXldeq15kuPC9wPlxuPHVsPjxsaT7Xntek16og157XqNeX16fXmdedINeR16jXmdeR15XXoteZINeg15nXmdeoINeY15XXkNec15ggKNeg16TXmNeV158gPSAxMDApOiDXl9ee15QgMS4zIMK3INeg15XXkteUIDIuNCDCtyDXm9eT15XXqCDXlNeQ16jXpSAzLjMgwrcg157XkNeT15nXnSA1IMK3INem15PXpyAxNyDCtyDXqdeR16rXkNeZIDMyIMK3INeQ15XXqNeg15XXoSA2NCDCtyDXoNek15jXldefIDEwMC48L2xpPlxuPGxpPtee15XXk9ecINeQ16DXldep15k6INeb15PXkNeZINeR157XodeT16jXldefINeQ15Ug15HXl9em16g7INe015TXqdee16nXtCDXkdee16jXm9eWLCDXlNen16jXldeR15nXnSDXlNeV15zXm9eZ150g157XlNeoINeR157XoteS15wg16fXmNefLjwvbGk+XG48bGk+16rXpNen15nXk9eZ150g157Xldem16LXmdedOiDXnteg15TXnC/XqiDXltee158sINeR15XXk9enL9eqINei15XXkdeT15XXqiAo15HXm9eo15jXmdeh15kg15TXkNeg15nXntem15nXlCksINee16bXmdeSL9eULCDXkdeV16DXlC/Xqi48L2xpPlxuPGxpPteU15vXnNeUOiDXm9ecINeT16jXmiDXnteV15HXmdec15Qg15zXkNeV16rXlCDXnteY16jXlDsg15DXpNep16gg15zXkdeX15XXqCDXk9eo15og15zXpNeZINeX15XXlten15QgKNeq16DXldei15QsINeZ16bXmdeo15QsINeT15nXkdeV16gsINeb16rXmdeR15QpLjwvbGk+XG48bGk+15DXnSDXlNeW157XnyDXp9em16g6INec15HXl9eV16gg15PXqNeaINeQ15fXqiDXnNeb15wg15TXm9eZ16rXlCAo157Xldee15zXpTog157XldeT15wg15DXoNeV16nXmSwgNSDXk9en17MpLjwvbGk+PC91bD4iLCAiY2hhbGxlbmdlIjogIjxwPjxiPteo16nXldeqIOKAkyDXnNen15HXldem15XXqiDXqdeh15nXmdee15Ug15DXlSDXnNep15nXoteV16gg15TXntep15ouPC9iPiDXqNee16og15fXqdeZ15HXlCDXkteR15XXlNeUOiDXlNei16jXm9eUINeV15nXpteZ16jXlC48L3A+XG48dWw+PGxpPtee16rXl9eR16gg15zXoNeV16nXkCDXlNee16nXoNeUINe015fXp9eoINeU15fXnNecIOKAkyDXlNeZ15HXmNeZ150g15jXm9eg15XXnNeV15LXmdeZ153XtCDXkdee16TXqNeYICjXmNec16HXp9eV16QsINec15XXldeZ15nXnywg15fXnNec15nXqiwg16rXl9eg16og15fXnNecKS48L2xpPlxuPGxpPteT15XXktee15DXldeqINeY15XXkdeV16o6INee15DXk9eZ150gKNeQ15HXpywg16fXldeoLCDXnteo15fXpyDigJMg16rXp9ep15XXqNeqINee16rXoteb15HXqik7INeg15XXkteUICjXl9eV150g15XXnNeX16Ug16LXpteV157XmdedIOKAkyDXqNeV15HXldeY15nXnSDXqdedINee15fXlteZ16fXmdedINeW157XnyDXp9em16gpLjwvbGk+XG48bGk+15zXlNei16jXmdeaINec16TXmTog15HXl9eZ16jXlCDXkdeo15XXqNeULCAyINeg15nXnteV16fXmdedINee15HXldeh16HXmSDXoteV15HXk9eV16osINeQ16rXkteoICsg16TXqteo15XXny48L2xpPjwvdWw+IiwgInN1bW1hcnkiOiAiPHA+PGI+15DXmdeh15XXoyDXldeh15nXm9eV150gKDUg15PXp9ezINeZ15fXkyDXotedINeb16jXmNeZ16Eg15TXmdem15nXkNeUKS48L2I+PC9wPlxuPHVsPjxsaT7XnNen16jXldeQINeQ16og15DXqNeR16LXqiDXlNeo16LXmdeV16DXldeqINeR16fXldecLCDXldec15HXp9epINee15TXm9eZ16rXlCDXk9eV15LXnteUINee15TXqdeZ16LXldeoINec15vXnCDXkNeX15MuPC9saT5cbjxsaT7XqdeZ16rXldejINeR15bXldeS15XXqiAzMCDXqdeg15nXldeqLCDXldeQ15YgMuKAkzMg15bXldeS15XXqiDXntep16rXpNeZ150uPC9saT5cbjxsaT7XkNek16nXqCDXnNeU16TXoteZ15wg15DXqiDXlNep16LXldefICjij7EpINeb15PXmSDXnNep157XldeoINei15wg15TXltee158uPC9saT48L3VsPiIsICJleGl0IjogIjx1bD48bGk+MuKAkzMg15PXp9ezINeQ15fXqNeV16DXldeqLiDXlNeb16jXmNeZ16Eg16DXntem15Ag15LXnSDXkdeT16Mg15TXoteR15XXk9eUINec15TXk9ek16HXlC48L2xpPlxuPGxpPtee15Qg15zXl9ek16k6INeh15PXqCDXoNeb15XXnyAo15TXqdee16kg4oaQINeX157XlCDihpAg16DXldeS15Qg4oaQINeb15PXldeoINeU15DXqNelLi4uKSwg15TXodeR16gg16nXm9eV15zXnCDXtNee16HXnNeV15wg15DXqNeV15og15nXldeq16ggLyDXqNeX15XXpyDXmdeV16rXqCAvINeQ15nXmNeZINeZ15XXqteo17QuPC9saT5cbjxsaT7XlNeh15nXnteV158g8J+YgC/wn5mCL/CfpJQg16LXldeW16gg15zXqteb16DXnyDXkNeqINeU16nXmdei15XXqCDXlNeR15AgKNec157XqdecINec15XXl9eV16og16nXoNeUINeV157Xl9eW15XXqNeZ15XXqiwg16nXnteV16TXmdei15nXnSDXktedINeU150g15HXntek16jXmCkuPC9saT48L3VsPiIsICJjcmVkaXRzIjogIjx1bD48bGk+15vXnCDXlNeg16rXldeg15nXnSDXnta+TkFTQSAoUGxhbmV0YXJ5IEZhY3QgU2hlZXQg15XWvk5BU0EgU2NpZW5jZSkuINee16HXpNeo15kg15TXmdeo15fXmdedINee16nXqteg15nXnSDXm9ep157XqteS15zXmdedINeZ16jXl9eZ150g15fXk9ep15nXnS48L2xpPlxuPGxpPteq15XXm9eg15nXqiDXlNec15nXnteV15PXmdedOiDXntek16jXmCDXlNeq15vXoNeZ150g15HXnteT16Ig15XXmNeb16DXldec15XXkteZ15Qg15zXm9eZ16rXlCDXlNezICjXntep16jXkyDXlNeX15nXoNeV15opLCDXqteX15XXnSDXtNee15PXoteZINeb15PXldeoINeU15DXqNelINeV15TXmden15XXnSDigJMg157Xkdeg15Qg157Xoteo15vXqiDXlNep157Xqde0LjwvbGk+XG48bGk+15TXkNeZ15XXqNeZ150g15XXlNeQ16DXmdee16bXmdeUINem15XXmdeo15Ug15HXnteZ15XXl9eTOyDXkNeZ158g16rXnteV16DXldeqINeX15nXpteV16DXmdeV16ouPC9saT48L3VsPiJ9</script>
+<footer class="site-foot" role="contentinfo"><span class="made">נוצר ע״י מור לנגר אפל</span><span class="sep">|</span><a href="#credits" data-goto="credits">מקורות וקרדיטים</a><span class="sep">|</span><a href="teacher.html">אזור המורים</a><span class="sep">|</span><a href="handout.html">דף עבודה להדפסה</a></footer>
+<script src="assets/solar.js"></script>
+<script src="assets/deck.js"></script>
+</body></html>
